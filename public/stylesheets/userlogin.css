@@ -1,0 +1,71 @@
+.login{
+    
+    width: 450px;
+    height:350px;
+    background: linear-gradient(135deg, #f9f9fa 0%, #aceae1 100%);
+    border-radius: 7px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+
+}
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+background-image: url("http://www.hellosmartblog.com/wp-content/uploads/2016/05/Email.jpeg");
+background-size:cover;
+}
+h1{
+margin-left: 160px;
+}
+h2{
+margin-left: 40px;
+}
+input{
+margin-left: 28px;
+height: 30px;
+width: 350px;
+}
+button{
+padding: 0.8em 1.8em;
+border:1px solid black;
+position: relative;
+overflow: hidden;
+background-color: rgb(252, 252, 252);
+text-align: center;
+text-transform: uppercase;
+font-size: 16px;
+transition: .3s;
+z-index: 1;
+font-family: inherit;
+color: #040808;
+border-radius: 20px;
+width: 100px;
+height: 30px;
+margin-left: 150px;
+margin-top: 20px;
+}
+
+button::before {
+content: '';
+width: 0;
+height: 300%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(45deg);
+background:#aceae1;
+transition: .5s ease;
+display: block;
+z-index: -1;
+}
+
+button:hover::before {
+width: 105%;
+}
+
+button:hover {
+color: #111;
+width: 105px;
+height: 35px;
+border: none;
+}

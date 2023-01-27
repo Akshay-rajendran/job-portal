@@ -1,0 +1,50 @@
+h1{
+    margin-left: 480px;
+    color: rgb(37, 186, 245);
+}
+h2{
+    margin-left: 350px;
+}
+input{
+    margin-left: 340px;
+    height: 30px;
+    width: 400px;
+}
+button{
+    margin-left: 480px;
+    margin-top: 10px;
+
+        border: 2px solid #24b4fb;
+        background-color: #eef0f2;
+        border-radius: 0.9em;
+        padding: 0.8em 1.2em 0.8em 1em;
+        transition: all ease-in-out 0.2s;
+        font-size: 16px;
+       }
+       
+       button span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-weight: 600;
+       }
+       
+       button:hover {
+        background-color: #0071e2;
+       }
+ .experience{
+    width: 400px;
+    height: 100px;
+ }      
+body{
+    background: linear-gradient(
+        20deg,
+        rgb(93, 209, 255) 0%,
+        rgb(93, 209, 255) 50%,                                                                 
+        rgb(255, 255, 252) 50%,
+        rgb(244, 244, 241) 100%
+    );
+    
+   
+}
