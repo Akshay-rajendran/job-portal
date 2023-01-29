@@ -1,0 +1,151 @@
+h2{
+    margin-left: 100px;
+    color: white;
+}
+h1{
+    margin-left: 400px;
+    text-decoration: underline;
+  
+}
+input{
+    margin-left: 60px;
+    /* width: 200px; */
+    color: white;
+
+
+
+
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   input:focus, input:hover {
+    outline: none;
+    border-color: rgba(77, 229, 246, 0.8);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(87, 218, 251, 0.6);
+   }
+/* button{
+    margin-left: 400px;
+   margin-bottom: 10px;
+} */
+button {
+    margin-left: 400px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: white;
+    color: rgb(15, 14, 14);
+    border: none;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+            box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  button:hover {
+    background: rgb(61, 216, 255);
+    -webkit-box-shadow: 0 0 30px 5px rgba(55, 199, 231, 0.815);
+            box-shadow: 0 0 30px 5px rgba(63, 209, 234, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    -webkit-box-shadow: 0 0 50px 30px #fff;
+            box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @-webkit-keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  button:active {
+    -webkit-box-shadow: 0 0 0 0 transparent;
+            box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -webkit-transition: -webkit-box-shadow 0.2s ease-in;
+    transition: -webkit-box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
+  }
+  
+body{
+    
+  
+    background-image: url("https://www.e2studysolution.com/wp-content/uploads/elementor/thumbs/adult-blur-computer-cup-374897-scaled-olpzsrppg34pfaxjj6x76dz5srk7zymt9vsmrii33k.jpg");
+    background-size: 100vw  ;
+}
+
+
+label{
+    color: white;
+}
+
+.c1{
+    width: 300px;
+    height: 30px;
+
+}

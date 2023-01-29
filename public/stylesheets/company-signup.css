@@ -1,17 +1,17 @@
 h1{
-    margin-left: 480px;
+    margin-left: 450px;
     color: rgb(37, 186, 245);
 }
 h2{
-    margin-left: 350px;
+    margin-left: 300px;
 }
 input{
-    margin-left: 340px;
+    margin-left: 300px;
     height: 30px;
     width: 400px;
 }
 button{
-    margin-left: 480px;
+    margin-left: 450px;
     margin-top: 10px;
 
         border: 2px solid #24b4fb;
