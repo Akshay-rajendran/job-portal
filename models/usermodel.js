@@ -8,21 +8,22 @@ const userschema=new mongoose.Schema({
     },
     email:{
         type:String,
-        maxlength:[25,"charatetrs must be less than 25"],
-        
+        unique:true,
+        required:true
     },
     phoneNumber:{
         type:Number,
         maxlength:[11,"charatetrs must be less than 11"],
-        
+        required:true
     },
-    password:{
+    Password:{
         type:String,
-        maxlength:[25,"charatetrs must be less than 25"],
+        required:true
     
     },
     workStatus:{
         type:String,
+        required:true
     
     }
 })

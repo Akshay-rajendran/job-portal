@@ -39,8 +39,8 @@ z-index: 1;
 font-family: inherit;
 color: #040808;
 border-radius: 20px;
-width: 100px;
-height: 30px;
+width: 105px;
+height: 35px;
 margin-left: 150px;
 margin-top: 20px;
 }
@@ -54,7 +54,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%) rotate(45deg);
 background:#aceae1;
-transition: .5s ease;
+transition: all .6s ease;
 display: block;
 z-index: -1;
 }
@@ -68,4 +68,5 @@ color: #111;
 width: 105px;
 height: 35px;
 border: none;
+box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
 }
