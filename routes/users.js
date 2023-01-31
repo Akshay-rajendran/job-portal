@@ -1,5 +1,5 @@
 var express = require('express');
-const { viewIndexPage, viewSignUp,usersignup,dosignup } = require('../controllers/usercontroller');
+const { viewIndexPage, viewSignUp,usersignup,dosignup,loginpageuser,home } = require('../controllers/usercontroller');
 var router = express.Router();
 
 
@@ -10,5 +10,9 @@ router.get("/userlogin", viewSignUp
 router.get("/usersignup",usersignup)
 
 router.post("/userssignup",dosignup)
+
+router.post("/userloginpage",loginpageuser)
+
+router.get("/home",home)
 
 module.exports = router;

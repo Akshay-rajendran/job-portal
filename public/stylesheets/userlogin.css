@@ -3,7 +3,7 @@
     width: 450px;
     height:350px;
     background: linear-gradient(135deg, #f9f9fa 0%, #aceae1 100%);
-    border-radius: 7px;
+    border-radius: 20px;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 
 }
@@ -24,6 +24,8 @@ input{
 margin-left: 28px;
 height: 30px;
 width: 350px;
+border-radius: 10px;
+border: 1px solid black;
 }
 button{
 padding: 0.8em 1.8em;
@@ -34,7 +36,7 @@ background-color: rgb(252, 252, 252);
 text-align: center;
 text-transform: uppercase;
 font-size: 16px;
-transition: .3s;
+transition: .6s;
 z-index: 1;
 font-family: inherit;
 color: #040808;
@@ -50,11 +52,11 @@ content: '';
 width: 0;
 height: 300%;
 position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%) rotate(45deg);
+top: 40%;
+left: 60%;
+transform: translate(-10%, -70%) rotate(75deg);
 background:#aceae1;
-transition: all .6s ease;
+transition: all .8s ease;
 display: block;
 z-index: -1;
 }
