@@ -19,8 +19,29 @@ const companyinputdata=async (req,res,next)=>{
         
     }
 }
+const companyloginpagefunction=async (req,res,next)=>{
+    const company=await companyModel.findOne({gmail:req.body.gmail})
+    if(company){
+        const companypasswordcheck = await bcrypt.compare(req.body.password, company.password)
+        if(companypasswordcheck){
+            req.session.company=company
+            console.log(req.session.company);
+            res.redirect("/company/companyhome")
+        }else{
+            res.redirect("/company/companylogin")
+
+        }
+    }else{
+        res.redirect("/company/companylogin")
+    }
+}
+const homee=(req,res,next)=>{
+    res.render("company/company-home.hbs")
+}
 module.exports={
     companysignup,
     companylogin,
-    companyinputdata
+    companyinputdata,
+    companyloginpagefunction,
+    homee
 }

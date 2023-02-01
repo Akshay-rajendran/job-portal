@@ -1,4 +1,10 @@
  <link rel="stylesheet" href="stylesheets/user-signup.css">
+
+ {{#if alertmsg}}
+ <div>
+    <p>{{alertmsg}}</p>
+ </div>
+{{/if}}
  
  
   <form action="/userssignup" method="post">

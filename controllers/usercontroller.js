@@ -8,7 +8,12 @@ const viewSignUp = (req, res, next) => {
   res.render("users/userlogin", { title: "signup" })
 }
 const usersignup = (req, res, next) => {
-  res.render("users/user-signup")
+  if(req.body.alertmsg){
+   let {alertmsg}=req.session
+   res.render("users/user-signup",{alertmsg})
+  }else{
+    res.render("users/user-signup")
+  }
 }
 
 const dosignup = async (req, res, next) => {
@@ -18,6 +23,7 @@ const dosignup = async (req, res, next) => {
     res.redirect("/userlogin")
   } catch (error) {
     console.log(error, "failed")
+    req.session.alertmsg="Oops..signup failed,Retry"
     res.redirect("/usersignup")
   }
 }
@@ -26,7 +32,7 @@ const loginpageuser = async (req, res, next) => {
   const user = await userModel.findOne({ email: req.body.email })
   console.log(req.body, user);
   if (user) {
-    const passwordcheck = await bcrypt.compare(req.body.password, user.Password)
+      const passwordcheck = await bcrypt.compare(req.body.password, user.Password)
 
     if (passwordcheck) {
       req.session.user = user

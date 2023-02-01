@@ -5,7 +5,8 @@ const companyschema = new mongoose.Schema({
         type: String
     },
     gmail: {
-        type: String
+        type: String,
+        unique:true
     },
     password: {
         type: String
