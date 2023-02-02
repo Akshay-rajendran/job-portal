@@ -1,26 +1,26 @@
- <link rel="stylesheet" href="stylesheets/user-signup.css">
+<link rel="stylesheet" href="stylesheets/user-signup.css">
 
- {{#if alertmsg}}
- <div>
-    <p>{{alertmsg}}</p>
- </div>
+{{#if alertmsg}}
+<div>
+  <p style="color:blue">{{alertmsg}}</p>
+</div>
 {{/if}}
- 
- 
-  <form action="/userssignup" method="post">
-        <h1>User Signup</h1>
-    <h2>full name</h2>
-    <input class="c1 name" type="text" name="fullName">
-    <h2>Email</h2>
-    <input class="c1 email" type="text" name="email">
-    <h2>Phone Number</h2>
-    <input class="c1 phone" type="number" name="phoneNumber">
-    <h2>password</h2>
-    <input class="c1 passwrd" type="password" name="Password">
-    <h2>Work status</h2>
-    <input type="radio" name="workStatus" value="fresher">
-    <label>fresher</label> 
-    <input type="radio" name="workStatus" value="worker">
-    <label for="">worker</label><br>
-    <button>submit</button>
+
+
+<form action="/userssignup" method="post">
+  <h1>User Signup</h1>
+  <h2>full name</h2>
+  <input class="c1 name" type="text" name="fullName">
+  <h2>Email</h2>
+  <input class="c1 email" type="text" name="email">
+  <h2>Phone Number</h2>
+  <input class="c1 phone" type="number" name="phoneNumber">
+  <h2>password</h2>
+  <input class="c1 passwrd" type="password" name="Password">
+  <h2>Work status</h2>
+  <input type="radio" name="workStatus" value="fresher">
+  <label>fresher</label>
+  <input type="radio" name="workStatus" value="worker">
+  <label for="">worker</label><br>
+  <button>submit</button>
 </form>

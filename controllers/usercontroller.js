@@ -8,8 +8,9 @@ const viewSignUp = (req, res, next) => {
   res.render("users/userlogin", { title: "signup" })
 }
 const usersignup = (req, res, next) => {
-  if(req.body.alertmsg){
+  if(req.session.alertmsg){
    let {alertmsg}=req.session
+   console.log(alertmsg);
    res.render("users/user-signup",{alertmsg})
   }else{
     res.render("users/user-signup")
