@@ -1,9 +1,16 @@
 const mongoose = require("mongoose");
 
+
 const jobschema= new mongoose.Schema({
     title:{
         type:String,
         required:true
+    },
+    companyname:{
+        type:String
+    },
+    companyid:{
+      type:String
     },
     discription:{
         type:String,
@@ -39,6 +46,7 @@ const jobschema= new mongoose.Schema({
     },
     jobstatus:{
         type:String,
+        default:"posted"
       
     }
 
