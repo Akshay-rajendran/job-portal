@@ -18,10 +18,7 @@ const jobdata=async (req,res,next)=>{
       await jobModel.create(req.body)
       // console.log(req.body);
       // res.redirect("/company/companylogin")
-      res.json({
-        success:true,
-        msg:"job uploaded"
-      })
+      res.redirect("/company/compjobview")
   } catch (error) {
       console.log(error);
       
@@ -30,12 +27,22 @@ const jobdata=async (req,res,next)=>{
   }
 
 }
-const companyjobview=(req,res,next)=>{
-  res.render("company/viewjobcompany")
+const companyjobview=async(req,res,next)=>{
+  if(req.session.company){
+let job =await jobModel.find({companyid:req.session.company._id})
+console.log(job);
+  res.render("company/viewjobcompany",{job})
+}else{
+  res.redirect("/company/companylogin")
+}}
+
+const viewjobuser=(req,res,next)=>{
+res.render("users/viewjobuser")
 }
 
 module.exports={
     jobupload,
     jobdata,
-    companyjobview
+    companyjobview,
+    viewjobuser
 }
