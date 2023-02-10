@@ -1,5 +1,5 @@
 var express = require('express');
-const { viewIndexPage, viewSignUp,usersignup,dosignup,loginpageuser,home } = require('../controllers/usercontroller');
+const { viewIndexPage, viewSignUp,usersignup,dosignup,loginpageuser,home,userupdateprofile,userprofile } = require('../controllers/usercontroller');
 var router = express.Router();
 const {viewjobuser}=require("../controllers/jobcontroller")
 
@@ -16,5 +16,8 @@ router.post("/userloginpage",loginpageuser)
 
 router.get("/home",home)
 router.get("/viewjobuser",viewjobuser)
+router.get("/userprofile",userupdateprofile)
+router.post("/userprofile",userprofile)
+
 
 module.exports = router;

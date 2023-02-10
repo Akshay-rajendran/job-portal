@@ -1,4 +1,5 @@
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const { findOneAndUpdate } = require('../models/jobmodel');
 const userModel = require("../models/usermodel")
 
 const viewIndexPage = function (req, res, next) {
@@ -57,6 +58,20 @@ const home = (req, res, next) => {
     res.redirect("/userlogin")
   }
 }
+const userupdateprofile=(req,res,next)=>{
+  res.render("users/updateuserprofile")
+}
+const userprofile=async(req,res,next)=>{
+  if(req.session.user)
+  try {
+    
+  await userModel.findOneAndUpdate({email:req.session.user.email},req.body)
+  }catch (error) {
+res.redirect("/userlogin")
+  }else{
+    res.redirect("/userlogin")
+  }
+}
 
 module.exports = {
   viewIndexPage,
@@ -64,5 +79,7 @@ module.exports = {
   usersignup,
   dosignup,
   loginpageuser,
-  home
+  home,
+  userupdateprofile,
+  userprofile
 }

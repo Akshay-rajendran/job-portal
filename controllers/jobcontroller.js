@@ -36,8 +36,10 @@ console.log(job);
   res.redirect("/company/companylogin")
 }}
 
-const viewjobuser=(req,res,next)=>{
-res.render("users/viewjobuser")
+const viewjobuser=async(req,res,next)=>{
+  let userjobview=await jobModel.find({jobstatus:"posted"})
+  console.log(userjobview);
+res.render("users/viewjobuser",{userjobview})
 }
 
 module.exports={
