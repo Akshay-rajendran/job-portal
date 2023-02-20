@@ -1,5 +1,5 @@
 body{
-    width: 100vw;
+    /* width: 100%; */
     height: 100vh;
     display: flex;
     flex-wrap:wrap;
@@ -20,7 +20,7 @@ background: linear-gradient(90deg, rgba(19,242,211,1) 0%, rgba(9,94,121,1) 35%, 
         display: flex;
         flex-direction: column;
         align-items: center;
-        background:rgba(rgb(231, 227, 227), rgb(229, 234, 229), rgb(245, 245, 247), 2);
+        background:rgba(rgb(231, 227, 227), rgb(229, 234, 229), rgb(245, 245, 247), .2);
         border-radius: 12px;
         box-shadow: inset 8px 5px 10px #a9a9aa77,
                      inset 5px -5px 10px #ffffff7e;

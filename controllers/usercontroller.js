@@ -51,12 +51,14 @@ const loginpageuser = async (req, res, next) => {
 
 }
 
-const home = (req, res, next) => {
-  if (req.session.user) {
-    res.render("users/home.hbs", { user: req.session.user })
-  } else {
-    res.redirect("/userlogin")
-  }
+const 
+home = (req, res, next) => {
+  // if (req.session.user) {
+    // res.render("users/home.hbs", { user: req.session.user })
+    res.render("users/home.hbs")
+  // } else {
+    // res.redir/ect("/userlogin")
+  // }
 }
 const userupdateprofile=(req,res,next)=>{
   res.render("users/updateuserprofile")

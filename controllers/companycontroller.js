@@ -5,7 +5,10 @@ const companysignup=(req,res,next)=>{
     res.render("company/company-signup")
 }
 const companylogin=(req,res,next)=>{
+ 
     res.render("company/company-login")
+  
+  
 }
 
 const companyinputdata=async (req,res,next)=>{
@@ -36,7 +39,10 @@ const companyloginpagefunction=async (req,res,next)=>{
     }
 }
 const homee=(req,res,next)=>{
-    res.render("company/company-home.hbs")
+    
+        res.render("company/company-home.hbs"   , { company: req.session.company })
+  
+    
 }
 module.exports={
     companysignup,

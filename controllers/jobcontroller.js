@@ -1,3 +1,4 @@
+const jobApplicationModel = require("../models/job-applicationmodel")
 const jobModel = require("../models/jobmodel")
 
 
@@ -42,9 +43,46 @@ const viewjobuser=async(req,res,next)=>{
 res.render("users/viewjobuser",{userjobview})
 }
 
+const jobdelete=async(req,res,next)=>{
+    console.log(req.params.id);
+    await jobModel.deleteOne({_id:req.params.id})
+    res.render("company/viewjobcompany")
+ 
+}
+
+const apply=async(req,res,next)=>{
+  if(req.session.user){
+  const job=await jobModel.findOne({_id:req.params.id})
+  let body={
+    userid:req.session.user._id,
+    username:req.session.user.fullName,
+    jobid:job._id,
+    jobtitle:job.title,
+    companyid:job.companyid,
+    companyname:job.companyname,
+    applieddate:new Date().toDateString(),
+    
+  }
+  console.log(body);
+   await jobApplicationModel.create(body)
+  res.redirect("/home")
+}else{
+  res.redirect("/userlogin")
+}
+}
+
+const viewappliedjob=async(req,res,next)=>{
+ let aplliedjobs= await jobApplicationModel.find({userid:req.session.user._id})
+ console.log(aplliedjobs);
+  res.render("user/appliedjob.hbs",{aplliedjobs})
+}
+
 module.exports={
     jobupload,
     jobdata,
     companyjobview,
-    viewjobuser
+    viewjobuser,
+    jobdelete,
+    apply,
+    viewappliedjob
 }

@@ -1,24 +1,56 @@
 <link rel="stylesheet" href="/stylesheets/viewjobuser.css">
 
-
+    
 {{#each userjobview}}
 
 <div class="job">
+   <div class="tools">
+    <div class="circle">
+      <span class="red box"></span>
+    </div>
+    <div class="circle">
+      <span class="yellow box"></span>
+    </div>
+    <div class="circle">
+      <span class="green box"></span>
+    </div>
+  </div>
+  <div class="card__content">
+  </div>
+    <h1>{{title}}</h1>
+    <div class="main">
+        <div class="sub">
+            <p>QUALIFICATION: {{qualification}}</p>
+            <p>VECCANCY: {{veccancy}}</p>
+            <p>SALARY: {{salary}}</p>
+            <p>EXPERIANCE: {{experiance}}</p>
+        </div>
+        <div class="sub">
+            <p>DATE POSTED: {{dateposted}}</p>
+            <p>LAST DATE: {{lastdate}}</p>
+            <p>JOB TYPE: {{jobtype}}</p>
+            <p>JOB STATUS: {{jobstatus}}</p>
+        </div>
+    </div>
+    <div class="icon">
+        <a href=""><BUtton>VIEW</BUtton></i>
+        </a>
 
-<h1>{{title}}</h1>
-<p>{{qualification}}</p>
-<p>Veccancy:{{veccancy}}</p>
-<p>Salary:{{salary}}</p>
-<p>Experiance:{{experiance}}</p>
-<p>Date posted:{{dateposted}}</p>
-<p>Last date:{{lastdate}}</p>
-<p>Job type:{{jobtype}}</p>
-<p>JOB STATUS:{{jobstatus}}</p>
-<div class="icon">
-<a href=""><BUtton>VIEW COMPANY</BUtton></i>
-</a>
-<a href=""><BUtton>APPLY</BUtton></i>
-</a>
- </div>
+        <a href="/applyjob/{{_id}}"><BUtton>APPLY</BUtton></i>
+        </a>
+    </div>
 </div>
 {{/each}}
+
+
+
+
+
+
+
+
+
+
+
+
+

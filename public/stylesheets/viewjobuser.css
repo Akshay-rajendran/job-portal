@@ -1,79 +1,106 @@
 body{
-    width: 100vw;
-    height: 100vh;
     display: flex;
-    flex-wrap:wrap;
-    /* justify-content: space-around; */
-   
-    background: rgb(19,242,211);
-background: linear-gradient(90deg, rgba(19,242,211,1) 0%, rgba(9,94,121,1) 35%, rgba(0,212,255,1) 100%);
-   
-    padding-right: 200px;
+    flex-wrap: wrap;
+    vertical-align: auto;
+    background: rgb(26,91,92);
+    background: linear-gradient(90deg, rgba(26,91,92,1) 0%, rgba(36,207,157,1) 44%, rgba(0,212,255,1) 100%);
 }
-
-
-.job{
-   
-        width: 30vw;
-    color: white;
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background:rgba(rgb(231, 227, 227), rgb(229, 234, 229), rgb(245, 245, 247), 2);
-        border-radius: 12px;
-        box-shadow: inset 8px 5px 10px #a9a9aa77,
-                     inset 5px -5px 10px #ffffff7e;
-       margin: 10px 10px;
-       border: 2px solid white;
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.job:hover{
-    transition: transform .2s;
-  transform: scale(1.1);
-  transition: all .2s ease-in;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border: 2px solid rgb(108, 250, 238);
+.sub{
+   padding-left: 10px;
+   padding-right: 10px;
+}
+.job {
+    width: 470px;
+    height: 290px;
+    margin:10px;
     
+    background-color: #f8fafb;
+    border-radius: 20px;
+    z-index: 1;
+   }
+   
+   .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+   }
+   
+   .circle {
+    padding: 0 4px;
+   }
+   
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+   
+   .red {
+    background-color: #ff605c;
+   }
+   
+   .yellow {
+    background-color: #ffbd44;
+   }
+   
+   .green {
+    background-color: #00ca4e;
+   }
+.job:hover{
+
+    transition: transform .6;
+    transform: scale(1.1);
+    transition: all .2s ease-in;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+   
+.icon{
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+   }
+   
+   button {
+    background: rgb(6,14,131);
+    background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+    border: none;
+   }
+   
+   button:hover {
+    background: rgb(0,3,255);
+    background: linear-gradient(0deg, rgb(0, 17, 255) 0%, rgba(2,126,251,1) 100%);
+   }
 
 h1{
-    margin-left: 0vw;
-    margin-top: 10px;
-    font-size: xx-large;
-    color: #ffffff;
-    text-shadow: black;
-    box-shadow:2px 2px 2px black;
+    margin-left: 170px;
 }
-.fa-solid{
- font-size: 20px;
- width: 40px;
- height: 40px;
- border-radius: 50%;
- background-color: #ffffff;
- color: rgb(9, 214, 237);
- display: flex;
- justify-content: center;
- align-items: center;
-
-}
-.fa-solid:hover{
-    color:white;
-    transition: transform .2s;
-    transform: scale(1.2);
-    transition: all .2s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-
-
-.icon{
-  display: flex;
-  justify-content: space-between;
-  width: 20vw;
-}
-
 p{
-    font-size: large;
-  }
-  p:hover{
-    text-decoration: underline;
-  }
+    color: #0f52af;
+}
