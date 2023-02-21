@@ -32,7 +32,7 @@ const dosignup = async (req, res, next) => {
 
 const loginpageuser = async (req, res, next) => {
   const user = await userModel.findOne({ email: req.body.email })
-  console.log(req.body, user);
+  console.log( user);
   if (user) {
       const passwordcheck = await bcrypt.compare(req.body.password, user.Password)
 
@@ -68,6 +68,7 @@ const userprofile=async(req,res,next)=>{
   try {
     
   await userModel.findOneAndUpdate({email:req.session.user.email},req.body)
+  res.redirect("/userlogin")
   }catch (error) {
 res.redirect("/userlogin")
   }else{

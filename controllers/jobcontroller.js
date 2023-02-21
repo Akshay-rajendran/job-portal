@@ -1,3 +1,4 @@
+const async = require("hbs/lib/async")
 const jobApplicationModel = require("../models/job-applicationmodel")
 const jobModel = require("../models/jobmodel")
 
@@ -72,9 +73,14 @@ const apply=async(req,res,next)=>{
 }
 
 const viewappliedjob=async(req,res,next)=>{
+  console.log(req.session.user);
  let aplliedjobs= await jobApplicationModel.find({userid:req.session.user._id})
  console.log(aplliedjobs);
-  res.render("user/appliedjob.hbs",{aplliedjobs})
+  res.render("users/appliedjob",{aplliedjobs})
+}
+const viewappliedcompanyjob=async(req,res,next)=>{
+ let companyapllyjob= await jobApplicationModel.find({companyid:req.session.company._id})
+ res.render("company/company-view-apply",{companyapllyjob})
 }
 
 module.exports={
@@ -84,5 +90,6 @@ module.exports={
     viewjobuser,
     jobdelete,
     apply,
-    viewappliedjob
+    viewappliedjob,
+    viewappliedcompanyjob
 }

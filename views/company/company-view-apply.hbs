@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/stylesheets/company-view-apply.css">
+{{#each companyapllyjob}}
+
+<img src="/images/person.png" alt="person">
+<h1>{{jobtitle}}</h1>
+<p>{{username}}</p>
+<p>{{status}}</p>
+<button>Accept</button>
+<a href="/company/company-userprofileview/{{userid}}"><button>view user</button></a>
+<button>Reject</button>
+
+{{/each}}

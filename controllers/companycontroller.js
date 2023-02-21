@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt')
 const companyModel=require("../models/companymodel")
+const userModel = require('../models/usermodel')
 
 const companysignup=(req,res,next)=>{
     res.render("company/company-signup")
@@ -39,15 +40,19 @@ const companyloginpagefunction=async (req,res,next)=>{
     }
 }
 const homee=(req,res,next)=>{
-    
-        res.render("company/company-home.hbs"   , { company: req.session.company })
-  
-    
-}
+     res.render("company/company-home.hbs"   , { company: req.session.company })
+    }
+
+const companyuserprofileview=async(req,res,next)=>{
+    let userprofile= await userModel.findOne({_id:req.params.id})
+    console.log(userprofile);
+     res.render("company/company-userprofile-view",{userprofile})
+}    
 module.exports={
     companysignup,
     companylogin,
     companyinputdata,
     companyloginpagefunction,
-    homee
+    homee,
+    companyuserprofileview
 }

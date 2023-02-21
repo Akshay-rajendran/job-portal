@@ -20,5 +20,5 @@ router.get("/viewjobuser",viewjobuser)
 router.get("/userprofile",userOnly,userupdateprofile)
 router.post("/userprofile",userOnly,userprofile)
 router.get("/applyjob/:id",userOnly,apply)
-router.get("/view-user-application",viewappliedjob)
+router.get("/view-user-application",userOnly,viewappliedjob)
 module.exports = router;
