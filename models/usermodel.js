@@ -41,7 +41,11 @@ const userschema = new mongoose.Schema({
   },
   language:{
     type:String
-  }
+  },
+  updated:{
+    type:Boolean,
+    default:false
+}
 });
 
 const userModel = mongoose.model("user", userschema);

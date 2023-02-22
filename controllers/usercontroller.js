@@ -64,16 +64,18 @@ const userupdateprofile=(req,res,next)=>{
   res.render("users/updateuserprofile")
 }
 const userprofile=async(req,res,next)=>{
-  if(req.session.user)
+
   try {
-    
-  await userModel.findOneAndUpdate({email:req.session.user.email},req.body)
+    req.body.updated=true
+ let updatedUser= await userModel.findOneAndUpdate({email:req.session.user.email},req.body,{new:true}) //new key word used for return updated profile after updating
+  await req.files.image.mv(`./public/users/${req.session.user._id}.jpg`)  //to upload imagee like (user image)
+  await req.files.resume.mv(`./public/resume/${req.session.user._id}.pdf`) //to upload resume in the form pdf
+  req.session.user=updatedUser  
   res.redirect("/userlogin")
   }catch (error) {
 res.redirect("/userlogin")
-  }else{
-    res.redirect("/userlogin")
-  }
+  
+}
 }
 
 module.exports = {

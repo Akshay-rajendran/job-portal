@@ -80,16 +80,29 @@ const viewappliedjob=async(req,res,next)=>{
 }
 const viewappliedcompanyjob=async(req,res,next)=>{
  let companyapllyjob= await jobApplicationModel.find({companyid:req.session.company._id})
+ console.log(companyapllyjob);
  res.render("company/company-view-apply",{companyapllyjob})
-}
+  }
+  const rejectuser=async(req,res,next)=>{
+     await jobApplicationModel.findOneAndUpdate({_id:req.params.id},{status:"reject"})
+     res.redirect("/company/viewappliedjob")
+  }
+  const acceptuser=async(req,res,next)=>{
+    let user=await jobApplicationModel.findOneAndUpdate({_id:req.params.id},{status:"Accept"})
+    console.log(user);
+    res.redirect("/company/viewappliedjob")
+  }
 
 module.exports={
     jobupload,
+
     jobdata,
     companyjobview,
     viewjobuser,
     jobdelete,
     apply,
     viewappliedjob,
-    viewappliedcompanyjob
+    viewappliedcompanyjob,
+    rejectuser,
+    acceptuser
 }
