@@ -1,0 +1,20 @@
+<h1>Company Update Profile</h1>
+
+
+<form action="/company/companyprofileupdatedata" method="post" enctype="multipart/form-data">
+<h2>About</h2>
+<textarea name="about" id="" cols="30" rows="10"></textarea>
+<h2>Address</h2>
+<textarea name="address" id="" cols="30" rows="10"></textarea>
+<h2>mission</h2>
+<textarea name="mission" id="" cols="30" rows="10"></textarea>
+<h2>vision</h2>
+<textarea name="vision" id="" cols="30" rows="10"></textarea>
+<input type="file" name="image" id="" placeholder="company image" required="true" accept=".jpg" >
+<h2>update</h2>
+<input type="radio" name="update" value="true">
+  <label>True</label>
+  <input type="radio" name="update" value="false">
+  <label for="">False</label><br>
+  <button>submit</button>
+  </form>

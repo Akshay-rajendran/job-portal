@@ -1,7 +1,22 @@
 var express = require('express');
-const { companysignup,companylogin,companyinputdata,companyloginpagefunction,homee,companyuserprofileview } = require('../controllers/companycontroller');
+const { companysignup,
+    companylogin,
+    companyinputdata,
+    companyloginpagefunction,
+    homee,
+    companyuserprofileview,
+    companyprofileupdate,
+    companyprofileupdatedata } = require('../controllers/companycontroller');
 var router = express.Router();
-const {jobupload,jobdata,companyjobview,jobdelete, viewappliedcompanyjob,rejectuser,acceptuser}=require("../controllers/jobcontroller");
+
+
+const {jobupload,
+    jobdata,
+    companyjobview,
+    jobdelete, 
+    viewappliedcompanyjob,
+    rejectuser,
+    acceptuser}=require("../controllers/jobcontroller");
 const companyOnly = require('../middileware/companymidlleware');
 /* GET users listing. */
 
@@ -19,4 +34,6 @@ router.get("/viewappliedjob",companyOnly,viewappliedcompanyjob)
 router.get("/company-userprofileview/:id",companyOnly,companyuserprofileview)
 router.get("/reject/:id",companyOnly,rejectuser)
 router.get("/accept/:id",companyOnly,acceptuser)
+router.get("/companyprofileupdate",companyOnly,companyprofileupdate)
+router.post("/companyprofileupdatedata",companyOnly,companyprofileupdatedata)
 module.exports = router;

@@ -16,6 +16,22 @@ const companyschema = new mongoose.Schema({
     },
     type: {
         type: String
+    },
+    about:{
+        type:String
+    },
+    address:{
+        type:String
+    },
+    mission:{
+        type:String
+    },
+    vision:{
+        type:String
+    },
+    update:{
+        type:Boolean,
+        default:false
     }
 
 })

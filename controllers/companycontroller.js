@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+const async = require('hbs/lib/async')
 const companyModel=require("../models/companymodel")
 const userModel = require('../models/usermodel')
 
@@ -45,14 +46,29 @@ const homee=(req,res,next)=>{
 
 const companyuserprofileview=async(req,res,next)=>{
     let userprofile= await userModel.findOne({_id:req.params.id})
-    console.log(userprofile);
+    console.log("companyuserprofileview",userprofile);
      res.render("company/company-userprofile-view",{userprofile})
 }    
+
+const companyprofileupdate=(req,res,next)=>{
+    res.render("company/company-update-profile.hbs")
+}
+
+const companyprofileupdatedata=async(req,res,next)=>{
+  let updatecompany=await companyModel.findOneAndUpdate({gmail:req.session.company.gamil},req.body,{new:true})
+  console.log("updated company profile",updatecompany);
+  await req.files.image.mv(`./public/users/${req.session.company._id}.jpg`) 
+  req.session.company=updatecompany
+  res.redirect("/company/companyhome")
+
+}
 module.exports={
     companysignup,
     companylogin,
     companyinputdata,
     companyloginpagefunction,
     homee,
-    companyuserprofileview
+    companyuserprofileview,
+    companyprofileupdate,
+    companyprofileupdatedata
 }

@@ -48,7 +48,6 @@ const jobdelete=async(req,res,next)=>{
     console.log(req.params.id);
     await jobModel.deleteOne({_id:req.params.id})
     res.render("company/viewjobcompany")
- 
 }
 
 const apply=async(req,res,next)=>{
@@ -66,7 +65,7 @@ const apply=async(req,res,next)=>{
   }
   console.log(body);
    await jobApplicationModel.create(body)
-  res.redirect("/home")
+  res.redirect("/userhome")
 }else{
   res.redirect("/userlogin")
 }
@@ -75,21 +74,30 @@ const apply=async(req,res,next)=>{
 const viewappliedjob=async(req,res,next)=>{
   console.log(req.session.user);
  let aplliedjobs= await jobApplicationModel.find({userid:req.session.user._id})
- console.log(aplliedjobs);
+ console.log("VIEW USER APPLIED JOBS",aplliedjobs);
   res.render("users/appliedjob",{aplliedjobs})
 }
+
+
 const viewappliedcompanyjob=async(req,res,next)=>{
  let companyapllyjob= await jobApplicationModel.find({companyid:req.session.company._id})
- console.log(companyapllyjob);
- res.render("company/company-view-apply",{companyapllyjob})
+ let applied=companyapllyjob.filter(e=>e.status=="applied")
+ let accept=companyapllyjob.filter(e=>e.status=="accept")
+ let reject=companyapllyjob.filter(e=>e.status=="reject")
+ console.log("VIEW APPLIED COMPANYJOBS",companyapllyjob);
+ res.render("company/company-view-apply",{companyapllyjob,applied,accept,reject})
   }
+
+
   const rejectuser=async(req,res,next)=>{
      await jobApplicationModel.findOneAndUpdate({_id:req.params.id},{status:"reject"})
      res.redirect("/company/viewappliedjob")
   }
+
+
   const acceptuser=async(req,res,next)=>{
     let user=await jobApplicationModel.findOneAndUpdate({_id:req.params.id},{status:"Accept"})
-    console.log(user);
+    console.log("ACCEPT USER",user);
     res.redirect("/company/viewappliedjob")
   }
 

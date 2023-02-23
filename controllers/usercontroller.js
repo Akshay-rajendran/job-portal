@@ -38,14 +38,12 @@ const loginpageuser = async (req, res, next) => {
 
     if (passwordcheck) {
       req.session.user = user
-      res.redirect("/home")
+      res.redirect("/userhome")
 
     } else {
       res.redirect("/userlogin")
     }
-
-
-  } else {
+   } else {
     res.redirect("/userlogin")
   }
 
@@ -77,6 +75,9 @@ res.redirect("/userlogin")
   
 }
 }
+const userhome=(req,res,ext)=>{
+  res.render("users/userhome")
+}
 
 module.exports = {
   viewIndexPage,
@@ -86,5 +87,6 @@ module.exports = {
   loginpageuser,
   home,
   userupdateprofile,
-  userprofile
+  userprofile,
+  userhome
 }
