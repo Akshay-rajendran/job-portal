@@ -1,9 +1,10 @@
 body{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     vertical-align: auto;
-    background: rgb(26,91,92);
-    background: linear-gradient(90deg, rgba(26,91,92,1) 0%, rgba(36,207,157,1) 44%, rgba(0,212,255,1) 100%);
+    background: rgb(196, 212, 212);
+    /* background: linear-gradient(90deg, rgba(26,91,92,1) 0%, rgba(36,207,157,1) 44%, rgba(0,212,255,1) 100%); */
 }
 .main{
     display: flex;
@@ -18,7 +19,7 @@ body{
     width: 470px;
     height: 290px;
     margin:10px;
-    
+    border: 1PX SOLID black;
     background-color: #f8fafb;
     border-radius: 20px;
     z-index: 1;
@@ -59,7 +60,7 @@ body{
     transition: transform .6;
     transform: scale(1.1);
     transition: all .2s ease-in;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
    

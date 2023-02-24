@@ -81,8 +81,8 @@ const viewappliedjob=async(req,res,next)=>{
 
 const viewappliedcompanyjob=async(req,res,next)=>{
  let companyapllyjob= await jobApplicationModel.find({companyid:req.session.company._id})
- let applied=companyapllyjob.filter(e=>e.status=="applied")
- let accept=companyapllyjob.filter(e=>e.status=="accept")
+ let applied=companyapllyjob.filter(e=>e.status=="Applied")
+ let accept=companyapllyjob.filter(e=>e.status=="Accept")
  let reject=companyapllyjob.filter(e=>e.status=="reject")
  console.log("VIEW APPLIED COMPANYJOBS",companyapllyjob);
  res.render("company/company-view-apply",{companyapllyjob,applied,accept,reject})

@@ -21,6 +21,7 @@ const companyinputdata=async (req,res,next)=>{
         res.redirect("/company/companylogin")
     } catch (error) {
         console.log(error);
+        res.redirect("/company/companysignup")
         
     }
 }
@@ -55,7 +56,7 @@ const companyprofileupdate=(req,res,next)=>{
 }
 
 const companyprofileupdatedata=async(req,res,next)=>{
-  let updatecompany=await companyModel.findOneAndUpdate({gmail:req.session.company.gamil},req.body,{new:true})
+  let updatecompany=await companyModel.findOneAndUpdate({gmail:req.session.company.gmail},req.body,{new:true})
   console.log("updated company profile",updatecompany);
   await req.files.image.mv(`./public/users/${req.session.company._id}.jpg`) 
   req.session.company=updatecompany

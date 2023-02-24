@@ -36,4 +36,5 @@ router.get("/reject/:id",companyOnly,rejectuser)
 router.get("/accept/:id",companyOnly,acceptuser)
 router.get("/companyprofileupdate",companyOnly,companyprofileupdate)
 router.post("/companyprofileupdatedata",companyOnly,companyprofileupdatedata)
+router.get("forjobedit",companyOnly,)
 module.exports = router;
