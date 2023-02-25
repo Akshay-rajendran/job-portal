@@ -61,7 +61,26 @@ const companyprofileupdatedata=async(req,res,next)=>{
   await req.files.image.mv(`./public/users/${req.session.company._id}.jpg`) 
   req.session.company=updatecompany
   res.redirect("/company/companyhome")
+}
 
+const editprofile=async(req,res,next)=>{
+  let profile=await companyModel.findOne({gmail:req.session.company.gmail})
+    console.log("current profile",profile);
+    res.render("company/editprofile",{profile})
+    
+}
+
+const editingprofile=async(req,res,next)=>{
+ try {
+    let newprofile=await companyModel.findOneAndUpdate({gmail:req.session.company.gmail},req.body,{new:true})
+ await req.files.image.mv(`./public/users/${req.session.company._id}.jpg`) 
+ console.log("new company profile",newprofile);
+ req.session.company=newprofile
+ res.redirect("/company/companyhome")
+ } catch (error) {
+    console.log(error);
+ }
+ 
 }
 module.exports={
     companysignup,
@@ -71,5 +90,7 @@ module.exports={
     homee,
     companyuserprofileview,
     companyprofileupdate,
-    companyprofileupdatedata
+    companyprofileupdatedata,
+    editprofile,
+    editingprofile
 }

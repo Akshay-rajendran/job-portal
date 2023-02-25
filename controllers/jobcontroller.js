@@ -100,11 +100,25 @@ const viewappliedcompanyjob=async(req,res,next)=>{
     console.log("ACCEPT USER",user);
     res.redirect("/company/viewappliedjob")
   }
+  const editjob=async(req,res,next)=>{
+    let currentjob=await jobModel.findOne({_id:req.params.id})
+    console.log("for edit",currentjob);
+     res.render("company/editjob.hbs",{currentjob})
+  }
 
+  const editedjob=async(req,res,next)=>{
+    try {
+      req.body.dateposted=new Date().toDateString()
+     let edited= await jobModel.findOneAndUpdate({_id:req.params.id},req.body,{new:true})
+    console.log("edited job",edited);
+    res.redirect("/company/compjobview")
+    } catch (error) {
+      console.log(error);
+    }
+  }
 module.exports={
     jobupload,
-
-    jobdata,
+     jobdata,
     companyjobview,
     viewjobuser,
     jobdelete,
@@ -112,5 +126,7 @@ module.exports={
     viewappliedjob,
     viewappliedcompanyjob,
     rejectuser,
-    acceptuser
+    acceptuser,
+    editjob,
+    editedjob
 }

@@ -1,0 +1,21 @@
+<h1>Edit profile</h1>
+<form action="/company/editingprofile" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" id="" placeholder="company image" required="true" accept=".jpg" >
+    <h2>Company Name</h2>
+    <input type="text" value="{{profile.companyname}}" name="companyname">
+    <h2>Gmail</h2>
+    <input type="text" value="{{profile.gmail}}" name="gmail">
+     <h2>Phone</h2>
+    <input type="text" value="{{profile.phone}}" name="phone">
+    <h2>Type</h2>
+    <input type="text" value="{{profile.type}}" name="type">
+    <h2>About</h2>
+    <input type="text" value="{{profile.about}}" name="about">
+    <h2>Address</h2>
+    <input type="text" value="{{profile.address}}" name="address">
+    <h2>Mission</h2>
+    <input type="text" value="{{profile.mission}}" name="mission">
+    <h2>vision</h2>
+    <input type="text" value="{{profile.vision}}" name="vision"><br>
+    <button>save</button>
+</form>
