@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const async = require('hbs/lib/async');
 const { findOneAndUpdate } = require('../models/jobmodel');
 const userModel = require("../models/usermodel")
 
@@ -69,16 +70,31 @@ const userprofile=async(req,res,next)=>{
   await req.files.image.mv(`./public/users/${req.session.user._id}.jpg`)  //to upload imagee like (user image)
   await req.files.resume.mv(`./public/resume/${req.session.user._id}.pdf`) //to upload resume in the form pdf
   req.session.user=updatedUser  
-  res.redirect("/userlogin")
+  res.redirect("/userhome")
   }catch (error) {
 res.redirect("/userlogin")
   
 }
 }
 const userhome=(req,res,ext)=>{
-  res.render("users/userhome")
+  console.log("user-loged",req.session.user);
+  res.render("users/userhome",{user:req.session.user})
 }
-
+const logoutuser=(req,res,next)=>{
+  delete req.session.user
+  res.redirect("/home")
+}
+const editprofile=async(req,res,next)=>{
+  let user=await userModel.findOne({email:req.session.user.email})
+  console.log( "user profile",user);
+  res.render("users/editprofile",{user})
+}
+const editedprofile=async(req,res,next)=>{
+  let editedprofile=await userModel.findOneAndUpdate({email:req.session.user.email},req.body,{new:true})
+  console.log(editedprofile);
+  req.session.user=editedprofile
+  res.redirect("/userhome")
+}
 module.exports = {
   viewIndexPage,
   viewSignUp,
@@ -88,5 +104,8 @@ module.exports = {
   home,
   userupdateprofile,
   userprofile,
-  userhome
+  userhome,
+  logoutuser,
+  editprofile,
+  editedprofile
 }

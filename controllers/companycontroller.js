@@ -82,6 +82,11 @@ const editingprofile=async(req,res,next)=>{
  }
  
 }
+
+const logout=async(req,res,next)=>{
+    delete req.session.company
+    res.redirect("/home")
+}
 module.exports={
     companysignup,
     companylogin,
@@ -92,5 +97,6 @@ module.exports={
     companyprofileupdate,
     companyprofileupdatedata,
     editprofile,
-    editingprofile
+    editingprofile,
+    logout
 }

@@ -1,0 +1,28 @@
+<h1>Edit Profile</h1>
+
+  <form action="/editedprofile" method="post">
+<h2>Full Name</h2>
+<input type="text" value="{{user.fullName}}" name="fullName">
+<h2>Email</h2>
+<input type="text" value="{{user.email}}" name="email">
+<h2>Phone Number</h2>
+<input type="text" value="{{user.phoneNumber}}" name="phoneNumber">
+<h2>Workstatus</h2>
+<input type="radio" name="workStatus" value="fresher" >
+<label>fresher</label>
+<input type="radio" name="workStatus" value="worker">
+<label for="">worker</label><br>
+<h2>About</h2>
+<input type="text" value="{{user.about}}" name="about">
+<h2>Experiance</h2>
+<input type="text" value="{{user.experiance}}" name="experiance">
+<h2>Job catagory</h2>
+<input type="text" value="{{user.jobcatagory}}" name="jobcatagory">
+<h2>Language</h2>
+<input type="text" value="{{user.language}}" name="language">
+<h2>Qualification</h2>
+<input type="text" value="{{user.qualification}}" name="qualification">
+<h2>Skill</h2>
+<input type="text" value="{{user.skill}}" name="skill"><br>
+<button>save</button>
+</form>

@@ -8,7 +8,8 @@ const { companysignup,
     companyprofileupdate,
     companyprofileupdatedata,
     editprofile ,
-    editingprofile} = require('../controllers/companycontroller');
+    editingprofile,
+    logout} = require('../controllers/companycontroller');
 var router = express.Router();
 
 
@@ -46,4 +47,5 @@ router.get("/forjobedit/:id",companyOnly,editjob)
 router.post("/editedjob/:id",companyOnly,editedjob)
 router.get("/editprofile",companyOnly,editprofile)
 router.post("/editingprofile",companyOnly,editingprofile)
+router.get("/logout",companyOnly,logout)
 module.exports = router;
