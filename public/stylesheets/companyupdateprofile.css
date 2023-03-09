@@ -1,0 +1,28 @@
+body{
+ background-image: url("https://c1.wallpaperflare.com/preview/45/788/894/man-male-city-urban.jpg");
+background-size: contain;
+}
+h1{
+    margin-left: 26%;
+    font-size: 4vmax;
+    color: rgb(254, 255, 255);
+}
+h2{
+    margin-left: 600px;
+    color:rgb(35, 204, 255);
+    
+}
+textarea{
+width: 600px;
+height: 50px;
+border-radius: 10px;
+margin-left: 500px;
+}
+input{
+    color:rgb(34, 229, 255);
+    margin-left: 600px;
+}
+label{
+    color: white;
+    margin-left: 600px;
+}

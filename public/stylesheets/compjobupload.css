@@ -11,9 +11,11 @@ img:hover{
 body{
     display: flex;
     justify-content: space-around;
+    background-color: rgba(156, 224, 235, 0.06)
 }
 h1{
-    text-decoration: underline55;
+ 
+    font-size: 4vmax;
 }
 
 button {
@@ -55,5 +57,4 @@ button {
 h2{
     color: rgb(34, 188, 215);
 }   
-
 

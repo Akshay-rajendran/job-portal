@@ -1,51 +1,54 @@
 body{
-    background: rgb(2,0,36);
-background: radial-gradient(circle,rgba(2,0,36,1) 0%, rgba(36,207,157,1) 78%, rgba(0,212,255,1) 100%);
+background-color: rgb(255, 255, 255);
 }
 h1{
-    color: aliceblue;
-    margin-left: 45%;
+    color: rgb(32, 169, 248);
+    margin-left: 35%;
     margin-top: 20px;
+    font-size:10vmax;
 }
-a{
-     text-decoration: none;
-
-        background-color: #eee;
-        border: none;
-        padding: 1rem;
-        font-size: 1rem;
-        width: 10em;
-        border-radius: 1rem;
-        color: lightcoral;
-        box-shadow: 0 0.4rem #dfd9d9;
-        cursor: pointer;
-       }
-       
-       a:active {
-        color: white;
-        box-shadow: 0 0.2rem #dfd9d9;
-        transform: translateY(0.2rem);
-       }
-       
-       a:hover:not(:disabled) {
-        background: lightcoral;
-        color: rgb(25, 15, 205);
-        text-shadow: 0 0.1rem #bcb4b4;
-       }
-       
-       a:disabled {
-        cursor: auto;
-        color: grey;
-       }
+a {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+    text-decoration: none;
+   }
+   
+   a:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512px 1.5s infinite;
+   }
+   
+   @keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #05bada66;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
 p{
-    color: aliceblue;
+    color: rgb(16, 16, 17);
     font-size: xx-large;
     margin-right: 10px;
     position:relative;
 }
-div{
+.about{
     display: flex;
     margin-top: 60px;
+    margin-bottom: 50px;
 }
 img{
     width: 450px;
@@ -57,8 +60,23 @@ img:hover{
     transition: transform .2s;
     transform: scale(1.1);
     transition: all .2s ease-in;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .links{
     display: flex;
     justify-content: space-around;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+}
+.tail{
+    display: inline;
+}
+li{
+    margin-top: 30px;
+    color: #915e24;
+}
+hr{
+    margin-top: 30px;
 }

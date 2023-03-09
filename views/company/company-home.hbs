@@ -1,19 +1,32 @@
 <link rel="stylesheet" href="/stylesheets/company-home.css">
-
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<a href="/company/logout"><i class="fa-duotone fa-arrow-up-left-from-circle"></i>logout</a>
 <h1>{{company.companyname}}</h1>
-<a href="/company/logout"><button>log out</button></a>
-<div>
+
+<div class="about">
     <p>The description is a type of text, such as narrative or argumentative, which consists of a detailed explanation
         about something, in a way that allows recreating a clear idea of what is being described.</p>
-    <img src="https://www.englishgrammar.org/wp-content/uploads/2014/03/Office-workplace-meeting-laptop-30213346.jpg" alt="">
+    <img src="https://www.englishgrammar.org/wp-content/uploads/2014/03/Office-workplace-meeting-laptop-30213346.jpg"
+        alt="">
 </div>
 <div class="links">
     <a href="/company/jobupload">Job upload</a><br>
     <a href="/company/viewappliedjob">view applied job</a><br>
-     <a href="/company/companyprofileupdate">Update profile</a>
+    <a href="/company/companyprofileupdate">Update profile</a>
     <a href="/company/compjobview">view job list</a>
     <a href="/company/editprofile">Edit Profile</a>
-   
-
+</div>
+<hr>
+</hr>
+<div class="details">
+    <div class="tail">
+        <li>{{company.phone}} </li>
+        <li>{{company.gmail}}</li>
+    </div>
+    <div class="tail">
+        <li>{{company.type}}</li>
+        <li>FAQ</li>
+    </div>
 </div>
