@@ -1,0 +1,116 @@
+.jobnav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100vw;
+    min-width: 100%;
+    height: 70px;
+    /* box-shadow: 1px 2px 20px; */
+    margin: 0;
+   
+    top: 0;
+    background-color: white;
+    border-bottom:2px solid black ;
+
+}
+
+.section {
+    width: 360px;
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    height: 70px;
+    width: 55px;
+}
+.section a{
+    text-decoration: none;
+    color: #000;
+}
+.section .cmp{
+    color: #2f8ee6;
+    margin: 0;
+    margin-top: 20px;
+}
+body{
+    background-color: #b8babc;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;  
+    padding: 0;
+}
+.details{
+    margin-top: 10px;
+    margin-left: 70px;
+    background-color: aliceblue;
+    display: grid;
+    width: 900px;
+    height: 450px;
+    border: 1px solid ;
+    grid-template-columns: 240px 600px;
+    grid-template-rows: 50px 400px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.userdetail{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.services{
+    border-right:1px solid  ;
+    grid-column: 1/1;
+    grid-row: 2/3;
+
+}
+
+h1{
+    transform: translate(20px,-50px);
+}
+.cmp1{
+    margin: 0;
+    margin-top: 20px;
+}
+
+.button-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  transform: translate(800px,-110px);
+  text-decoration: none;
+
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-10:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+p{
+    margin: 10px;
+    margin-left: 30px;
+    font-weight: 800;
+    font-size: larger;
+    
+}
+.p{
+    height: 100px;
+}
+h2{
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 60px;
+    font-weight: 700;
+}

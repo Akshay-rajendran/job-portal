@@ -1,19 +1,49 @@
 <link rel="stylesheet" href="/stylesheets/userhome.css
 ">
 
+<body>
+    <div class="jobnav">
+        <img src="images/job.png" alt="">
+        <div class="section">
+            <a href="/home"  class="cmp1">Home</a>
+            <a href="/view-user-application"  class="cmp1">appiled job</a>
+            <a href="" class="cmp">Company</a>
+            <a href=""  class="cmp1">Review</a>
+        </div>
 
-<h1>{{user.fullName}}</h1>
+    </div>
 
-<p>{{user.phoneNumber}}</p>
-<p>{{user.workStatus}}</p>
-<p>{{user.about}}</p>
-<p>{{user.experiance}}</p>
-<p>{{user.jobcatagory}}</p>
-<p>{{user.language}}</p>
-<p>{{user.qualification}}</p>
-<p>{{user.skill}}</p>
-<a href="/logoutuser"><button>log out</button></a>
-<a href="/view-user-application">VIEW APPLIED JOBS</a><br>
-<a href="/viewjobuser">VIEW ALL JOBS</a><br>
-<a href="/userprofile">update profile</a><br>
-<a href="/re-editprofile">edit profile</a><br>
+
+
+    <div class="details">
+
+
+        <div class="services">
+        <h1>{{user.fullName}}</h1>
+            <a href="/logoutuser"><button  class="button-10">log out</button></a>
+            
+            <a class="link" href="/view-user-application">Applied Jobs</a><br>
+            <hr>
+            <a class="link" href="/viewjobuser">All Jobs</a><br>
+            <hr>
+            <a class="link" href="/userprofile">Update Profile</a><br>
+            <hr>
+            <a class="link" href="/re-editprofile">Edit Profile</a><br>
+            <hr>
+            
+        </div>
+    
+        <div class="userdetail">
+            
+            <p> Contact: {{user.phoneNumber}}</p>
+            <p>Status: {{user.workStatus}}</p>
+            <p class="p">About:{{user.about}}</p>
+            <p>Experience: {{user.experiance}}</p>
+            <p>Category: {{user.jobcatagory}}</p>
+            <p>Language: {{user.language}}</p>
+            <p>Qualification: {{user.qualification}}</p>
+            <p>Skill: {{user.skill}}</p>
+        </div>
+
+    </div>
+</body>

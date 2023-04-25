@@ -1,28 +1,38 @@
+
+
+<link rel="stylesheet" href="/stylesheets/user-re-editprofile.css">
+
+
+
 <h1>Edit Profile</h1>
 
   <form action="/editedprofile" method="post">
 <h2>Full Name</h2>
-<input type="text" value="{{user.fullName}}" name="fullName">
+<input type="text"  class="in" value="{{user.fullName}}" name="fullName">
 <h2>Email</h2>
-<input type="text" value="{{user.email}}" name="email">
+<input type="text"  class="in" value="{{user.email}}" name="email">
 <h2>Phone Number</h2>
-<input type="text" value="{{user.phoneNumber}}" name="phoneNumber">
+<input type="text" class="in" value="{{user.phoneNumber}}" name="phoneNumber">
 <h2>Workstatus</h2>
 <input type="radio" name="workStatus" value="fresher" >
 <label>fresher</label>
 <input type="radio" name="workStatus" value="worker">
 <label for="">worker</label><br>
 <h2>About</h2>
-<input type="text" value="{{user.about}}" name="about">
+<input type="text" class="in" value="{{user.about}}" name="about">
 <h2>Experiance</h2>
-<input type="text" value="{{user.experiance}}" name="experiance">
+<input type="text"  class="in" value="{{user.experiance}}" name="experiance">
 <h2>Job catagory</h2>
-<input type="text" value="{{user.jobcatagory}}" name="jobcatagory">
+<input type="text"  class="in" value="{{user.jobcatagory}}" name="jobcatagory">
 <h2>Language</h2>
-<input type="text" value="{{user.language}}" name="language">
+<input type="text" class="in" value="{{user.language}}" name="language">
 <h2>Qualification</h2>
-<input type="text" value="{{user.qualification}}" name="qualification">
+<input type="text" class="in" value="{{user.qualification}}" name="qualification">
 <h2>Skill</h2>
-<input type="text" value="{{user.skill}}" name="skill"><br>
-<button>save</button>
+<input type="text" class="in" value="{{user.skill}}" name="skill"><br>
+<div class="btn">
+<button class="button-21" type="submit">save</button>
+<button class="button-21"><a href="/userhome">Back</a></button>
+
+</div>
 </form>
