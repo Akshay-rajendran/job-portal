@@ -1,22 +1,26 @@
 <link rel="stylesheet" href="/stylesheets/user-updateprofile.css">
-
-<h1>user profile update</h1>
+<div class="img">
+    <div class="bla">
+        <buttton  class="button-16"><a href="/userhome">Back</a></buttton>
+        <h1>Update Profile</h1>
+    </div>
+</div>
 <form action="/userprofile" method="post" enctype="multipart/form-data">
-    <h2>about</h2>
+    <h2>About</h2>
     <textarea name="about" id="" cols="30" rows="10"></textarea>
-    <h2>qualification</h2>
+    <h2>Qualification</h2>
     <textarea name="qualification" id="" cols="30" rows="10"></textarea>
-    <h2>skills</h2>
+    <h2>Skills</h2>
     <textarea name="skill" id="" cols="30" rows="10"></textarea>
-    <h2>experiance</h2>
+    <h2>Experiance</h2>
     <textarea name="experiance" id="" cols="30" rows="10"></textarea>
-    <h2>upload image</h2>
-    <input type="file" name="image" id="" accept=".jpg">
-    <h2>upload resume</h2>
+    <h2>Upload image</h2>
+    <input type="file" name="image" id="" placeholder="uplode image" accept=".jpg">
+    <h2>Upload resume</h2>
     <input type="file" name="resume" id="" accept=".pdf">
-    <h2>job catagory</h2>
+    <h2>Job catagory</h2>
     <input type="text" name="jobcatagory">
-    <h2>language</h2>
+    <h2>Language</h2>
     <input type="text" name="language" id=""><br>
-    <button>submit</button>
+    <button  class="button-41" >Update</button>
 </form>

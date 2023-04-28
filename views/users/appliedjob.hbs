@@ -1,12 +1,18 @@
 
+<link rel="stylesheet" href="/stylesheets/userappliedjob.css">
 
 
+
+<div class="allcard">
 {{#each aplliedjobs}}
 
+<div class="card">
 <h1>{{jobtitle}}</h1>
 <p>{{username}}</p>
-<p>{{companyname}}</p>
+<p>Company: {{companyname}}</p>
 <p>{{applieddate}}</p>
+</div>
 
 
 {{/each}}
+</div>

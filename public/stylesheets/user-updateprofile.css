@@ -1,0 +1,120 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    background-color: #d0cfcf;
+}
+.img{
+    width:100vw ;
+  
+    height: 200px;
+    background-image: url("https://i.pinimg.com/originals/a1/a1/f8/a1a1f8802e05db06891afaa9abba00df.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+.bla{
+    width:100vw ;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.425);
+
+}
+
+.button-16 {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 50px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.button-16:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+.button-16:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+.button-16 a{
+    text-decoration: none;
+    color: #000;
+}
+h1{
+    color: #fff;
+    margin-left: 380px;
+    margin-top: 60px;
+}
+textarea{
+    width: 700px;
+    height: 70px;
+    margin-left: 50px;
+}
+input{
+    margin-left: 50px;
+    width: 300px;
+    height: 30px;
+}
+h2{
+    margin-left: 60px;
+    margin-top: 20px;
+    transform: translate(0px,15px);
+}
+form{
+    width: 900px;
+  
+    /* border: 1px solid; */
+    margin: 40px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.button-41 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 800px;
+  margin: 40px;
+  z-index: 9;
+  border: 0;
+}
+
+.button-41:hover {
+  background: #00bd68;
+}
