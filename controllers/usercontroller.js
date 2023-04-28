@@ -96,7 +96,7 @@ const editedprofile=async(req,res,next)=>{
   res.redirect("/userhome")
 }
 module.exports = {
-  viewIndexPage,
+  
   viewSignUp,
   usersignup,
   dosignup,

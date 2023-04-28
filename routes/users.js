@@ -1,5 +1,5 @@
 var express = require('express');
-const { viewIndexPage,
+const { 
      viewSignUp,
      usersignup,
      dosignup,
