@@ -17,12 +17,12 @@ const userOnly = require('../middileware/usermiddileware');
 
 
 /* GET home page. */
-router.get('/', viewIndexPage);
+// router.get('/', viewIndexPage);
 router.get("/userlogin", viewSignUp)
 router.get("/usersignup",usersignup)
 router.post("/userssignup",dosignup)
 router.post("/userloginpage",loginpageuser)
-router.get("/home",home)
+router.get("/",home)
 router.get("/viewjobuser",viewjobuser)
 router.get("/userprofile",userOnly,userupdateprofile)
 router.post("/userprofile",userOnly,userprofile)

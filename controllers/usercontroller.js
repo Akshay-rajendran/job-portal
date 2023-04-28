@@ -3,9 +3,9 @@ const async = require('hbs/lib/async');
 const { findOneAndUpdate } = require('../models/jobmodel');
 const userModel = require("../models/usermodel")
 
-const viewIndexPage = function (req, res, next) {
-  res.render('index', { title: 'Express' });
-}
+// const viewIndexPage = function (req, res, next) {
+//   res.render('index', { title: 'Express' });
+// }
 const viewSignUp = (req, res, next) => {
   res.render("users/userlogin", { title: "signup" })
 }
